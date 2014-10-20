@@ -1,0 +1,9 @@
+Tests: testsuite
+Depends: @, @builddeps@, build-essential,
+         xvfb, xauth, dbus-x11,
+         libqt4-sql-sqlite
+Restrictions: rw-build-tree
+
+Tests: acc
+Depends: @,
+         dh-acc, exuberant-ctags

@@ -1,0 +1,16 @@
+From: Modestas Vainius <modax@debian.org>
+Subject: Use DebianABIManager for this source package. It's Debian-specific.
+Forwarded: not-needed
+
+For more information about DebianABIManager, refer to
+/usr/share/doc/pkg-kde-tools/README.DebianABIManager (pkg-kde-tools (>= 0.12)).
+
+Index: kde-baseapps/CMakeLists.txt
+===================================================================
+--- kde-baseapps.orig/CMakeLists.txt	2013-09-25 10:54:47.035271854 +0000
++++ kde-baseapps/CMakeLists.txt	2013-09-25 10:56:01.880338522 +0000
+@@ -63,3 +63,4 @@
+ 
+ feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+ 
++include(/usr/share/pkg-kde-tools/cmake/DebianABIManager.cmake)

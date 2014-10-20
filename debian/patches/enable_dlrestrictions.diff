@@ -1,0 +1,24 @@
+From: Modestas Vainius <modax@debian.org>
+Subject: Enable DLRestrictions (REJECT:OTHERSOVERSION) support for all libraries
+Forwarded: not-needed
+Origin: vendor
+Last-Update: 2011-05-25
+
+Enable REJECT:OTHERSOVERSION for these libraries because their ABI is typically
+not stable and structures frequently conflict.
+
+Index: kde-baseapps/CMakeLists.txt
+===================================================================
+--- kde-baseapps.orig/CMakeLists.txt	2013-09-25 11:01:28.931521848 +0000
++++ kde-baseapps/CMakeLists.txt	2013-09-25 11:02:24.045362189 +0000
+@@ -64,3 +64,10 @@
+ feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+ 
+ include(/usr/share/pkg-kde-tools/cmake/DebianABIManager.cmake)
++
++# Enable DLResctrictions
++if (CMAKE_BUILD_TYPE STREQUAL "Debian")
++    find_package(DLRestrictions)
++    set(DEFAULT_DLRESTRICTIONS "REJECT:OTHERSOVERSION")
++    kde4deb_dlrestrictions_process_libraries()
++endif (CMAKE_BUILD_TYPE STREQUAL "Debian")
