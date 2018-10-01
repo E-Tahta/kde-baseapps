@@ -1,3 +1,10 @@
+kde-baseapps (4:4.14.2-2pardus1) unstable; urgency=medium
+
+  * Pardus CI integration
+  * Remove konquerer from depends
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Mon, 01 Oct 2018 13:24:28 +0300
+
 kde-baseapps (4:4.14.2-1) unstable; urgency=medium
 
   * New upstream release (4.14.2).
