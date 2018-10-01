@@ -40,12 +40,10 @@ Depends: dolphin (>= ${source:Version}),
          kde-baseapps-bin (>= ${source:Version}),
          kdepasswd (>= ${source:Version}),
          kfind (>= ${source:Version}),
-         konqueror (>= ${source:Version}),
          konsole,
          kwrite,
          plasma-widget-folderview (>= ${source:Version}),
          ${misc:Depends}
-Recommends: konqueror-nsplugins (>= ${source:Version})
 Breaks: kdebase-apps (<< 4:4.7.2)
 Replaces: kdebase-apps (<< 4:4.7.2)
 Description: base applications from the official KDE release (meta-package)
